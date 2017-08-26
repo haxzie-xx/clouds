@@ -5079,7 +5079,13 @@ small {
   transition: color .28s ease;
 }
 
-.tabs .tab a:hover, .tabs .tab a.active {
+.tabs .tab a:hover{
+  background-color: transparent;
+  color: #03a9f4;
+  font-size: 14px;
+}
+
+.tabs .tab a.active {
   background-color: transparent;
   color: #03a9f4;
   font-size: 18px;

@@ -123,3 +123,31 @@ hr{
 .mar5top{
   margin-top: 15px;
 }
+.heading{
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4d5256;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #10b8f7;
+    background: -webkit-linear-gradient(45deg,#0fb8f6, #05dcfc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(45deg,#0fb8f6, #05dcfc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(45deg,#0fb8f6, #05dcfc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(45deg,#0fb8f6, #05dcfc); /* Standard syntax */
+}
