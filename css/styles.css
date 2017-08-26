@@ -151,3 +151,27 @@ hr{
     background: -moz-linear-gradient(45deg,#0fb8f6, #05dcfc); /* For Firefox 3.6 to 15 */
     background: linear-gradient(45deg,#0fb8f6, #05dcfc); /* Standard syntax */
 }
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+.buzzcard{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+.buzzcard img{
+  width: 100%;
+}
+.buzztitle{
+  align-self: center;
+  margin: auto;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #4d5256;
+}
+.buzzcontent{
+  font-size: 1.2em;
+}
