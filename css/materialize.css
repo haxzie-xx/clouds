@@ -4492,7 +4492,14 @@ html {
 @media only screen and (min-width: 1200px) {
   .nav-extended .nav-content ul{
     transform: translateX(32%);
-    webkit-transform: translateX(-32%);
+    -webkit-transform: translateX(32%);
+    overflow: hidden;
+  }
+  .nav-extended{
+    overflow: hidden;
+  }
+  .nav-extended .nav-content{
+    overflow: hidden;
   }
 }
 
