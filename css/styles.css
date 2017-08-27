@@ -109,7 +109,7 @@ hr{
 .title {
     font-size: 2em;
     position: relative;
-    margin: 0 auto 1em;
+    margin: 0 auto 0em;
     padding: 1em 1em .25em 1em;
     text-align: center;
     text-transform: uppercase;
@@ -156,4 +156,36 @@ hr{
 
 .pad5{
   padding: 10px;
+}
+
+.pad5top{
+  padding-top: 5px;
+}
+
+.mar25{
+  margin: 25px;
+}
+.size200{
+  width: 200px;
+}
+
+
+.propic-card{
+  border-radius: 5px;
+}
+
+.propic-card .propic{
+  width: 120px;
+  height: 120px;
+}
+
+.propic-card .name{
+  font-size: 18px;
+  padding: 0;
+}
+
+.propic-card .caption{
+  font-size: 14px;
+  opacity: 0.7;
+  padding: 0;
 }
