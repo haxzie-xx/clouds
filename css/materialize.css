@@ -5095,7 +5095,7 @@ small {
 .tabs .tab a.active {
   background-color: transparent;
   color: #03a9f4;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .tabs .tab.disabled a,
