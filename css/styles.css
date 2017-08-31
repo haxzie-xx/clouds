@@ -71,6 +71,9 @@
 .pad10top{
   padding-top: 10px;
 }
+.pad10bot{
+  padding-bottom: 10px;
+}
 .cardtitle{
   padding-left: 20px;
   padding-bottom: 0px;
@@ -193,4 +196,21 @@ hr{
   font-size: 14px;
   opacity: 0.7;
   padding: 0;
+}
+
+.result-title {
+    font-size: 1.2em;
+    position: relative;
+    margin: 0 auto 0em;
+    padding: 1em 1em 1em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 3px 3px 0px 0px;
+    background: #06f4ca;
+
+}
+
+.margin0{
+  margin: 0px;
 }
