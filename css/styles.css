@@ -6,7 +6,19 @@
   background: #10b8f7;
 
 }
+.gallery-hero{
+  z-index: 0;
+  width: 100%;
+  height: 200px;
+  background: #10b8f7;
 
+}
+
+.logo-img{
+  width: 120px;
+  height: 50px;
+  margin: 10px 10px 10px 10px;
+}
 .main-card {
   position: absolute;
   height: 400px;
