@@ -107,7 +107,7 @@
       </ul>
     </div>
     <div class="nav-content light-blue">
-      <ul class="tabs tabs-transparent center">
+      <ul id="main_tabs" class="tabs tabs-transparent center">
         <li class="tab"><a class="active" href="#home">Home</a></li>
         <li class="tab"><a id="events_trigger" href="#events">Events</a></li>
         <li class="tab"><a href="#members">Members</a></li>
@@ -183,7 +183,8 @@
               </div>
               <div class="card-content">
                 <p>The exciting inter branch cricket tournament of students and faculties of computer Science and Engineering
-                  Department.</p>
+                  Department.
+                </p>
               </div>
 
             </div>
@@ -206,7 +207,8 @@
               </div>
               <div class="card-content">
                 <p>A to Z technical events to challenge and showcase your skills to win exciting prices on a number events and
-                  activities.</p>
+                  activities.
+                </p>
               </div>
 
             </div>
@@ -250,7 +252,7 @@
     <div class="container">
       <div class="cards cards-3">
         <div class="col s12 tab-shadow center">
-          <ul class="tabs">
+          <ul id="event_tabs" class="tabs">
             <li class="tab col s3"><a id="events_tab" class="active" href="#allevents">All Events</a></li>
             <li class="tab col s3"><a href="#results">Results</a></li>
             <li class="tab col s3"><a href="#scoreboard">ScoreBoard</a></li>
@@ -598,7 +600,7 @@
     <div class="container">
       <div class="cards cards-3">
         <div class="col s12 tab-shadow">
-          <ul class="tabs">
+          <ul id="member_tabs" class="tabs">
             <li class="tab col s3"><a id="events_tab" class="active" href="#cordinators">Coordinators</a></li>
             <li class="tab col s3"><a href="#cultural">Cultural</a></li>
             <li class="tab col s3"><a href="#sports">Sports</a></li>
@@ -1337,11 +1339,25 @@
   <script>
     $(document).ready(function () {
       $(".button-collapse").sideNav();
-      $("ul.tabs").tabs({
+      $('#main_tabs').tabs({
         onShow: function (tab) {
-          $('ul.tabs').tabs();
+          switch(tab[0].id){
+            case 'events':
+              $('#event_tabs').tabs();
+              break;
+            case 'members':
+              $('#member_tabs').tabs();
+              break;
+          }
         }
       });
+
+      $('ul.tabs').bind('tab_change', function (event, content) {
+        if (content && content.hash) {
+          console.log('now on tab ' + content.hash);
+        }
+      });
+
     });
   </script>
 </body>
