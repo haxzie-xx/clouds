@@ -55,7 +55,7 @@
           <div class="gallery_card cards-3 pad0">
             <div class="row pad0 margin0">
               <!-- card image -->
-              <div class="col s12 m12 l12"><img src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
+              <div class="col s12 m12 l12"><img data-src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
               <div class="col s12 m12 l12 gcard_contents">
                 <div class="row pad0 margin0">
                   <div class="col s12 m8 l8">
@@ -77,7 +77,7 @@
           <div class="gallery_card cards-3 pad0">
             <div class="row pad0 margin0">
               <!-- card image -->
-              <div class="col s12 m12 l12"><img src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
+              <div class="col s12 m12 l12"><img data-src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
               <div class="col s12 m12 l12 gcard_contents">
                 <div class="row pad0 margin0">
                   <div class="col s12 m8 l8">
@@ -99,7 +99,7 @@
           <div class="gallery_card cards-3 pad0">
             <div class="row pad0 margin0">
               <!-- card image -->
-              <div class="col s12 m12 l12"><img src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
+              <div class="col s12 m12 l12"><img data-src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
               <div class="col s12 m12 l12 gcard_contents">
                 <div class="row pad0 margin0">
                   <div class="col s12 m8 l8">
@@ -121,7 +121,7 @@
           <div class="gallery_card cards-3 pad0">
             <div class="row pad0 margin0">
               <!-- card image -->
-              <div class="col s12 m12 l12"><img src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
+              <div class="col s12 m12 l12"><img data-src="images/gallery/album_cover/sample.jpg" class="gcard_image" /></div>
               <div class="col s12 m12 l12 gcard_contents">
                 <div class="row pad0 margin0">
                   <div class="col s12 m8 l8">
@@ -178,6 +178,12 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/lazyload.min.js"></script>
+  <script>
+     $(document).ready(function(){
+      var myLazyLoad = new LazyLoad();
+  });
+  </script>
 </body>
 
 </html>

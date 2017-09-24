@@ -46,12 +46,12 @@
                 <div class="col s12 cards-container">
                   <!-- drop images here -->
                   
-                    <img src="images/arpan.jpg" class="responsive-img img-card materialboxed"/>
-                    <img src="images/home_card_1.jpg" class="responsive-img img-card materialboxed"/>
-                    <img src="images/farewell.jpg" class="responsive-img img-card materialboxed"/>
-                    <img src="images/technical_events.jpg" class="responsive-img img-card materialboxed"/>
-                    <img src="images/sahyadri.jpg" class="responsive-img img-card materialboxed"/>
-                    <img src="images/clouds_fest.jpg" class="responsive-img img-card materialboxed"/>
+                    <img data-src="images/arpan.jpg" class="responsive-img img-card materialboxed"/>
+                    <img data-src="images/home_card_1.jpg" class="responsive-img img-card materialboxed"/>
+                    <img data-src="images/farewell.jpg" class="responsive-img img-card materialboxed"/>
+                    <img data-src="images/technical_events.jpg" class="responsive-img img-card materialboxed"/>
+                    <img data-src="images/sahyadri.jpg" class="responsive-img img-card materialboxed"/>
+                    <img data-src="images/clouds_fest.jpg" class="responsive-img img-card materialboxed"/>
                   
                 </div>
               </div>
@@ -91,8 +91,10 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/lazyload.min.js"></script>
   <script>
      $(document).ready(function(){
+      var myLazyLoad = new LazyLoad();
     $('.materialboxed').materialbox();
   });
   </script>
