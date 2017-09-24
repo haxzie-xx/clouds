@@ -1206,7 +1206,7 @@
             <div class="col s12 m6 l3 pad10">
               <div class="cards cards-3 teal accent-4 size200 pad10 propic-card">
                 <div class="row center">
-                  <img data-src="images/members/Decoration/satvik.jpg" class="propic circle  b-lazy" />
+                  <img data-src="images/members/Decoration/satvik.jpg" class="propic circle mar5top b-lazy" />
                 </div>
                 <span class="white-text name">
                             Sathvik
@@ -1506,9 +1506,11 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/blazy.min.js"></script>
+  <script type="text/javascript" src="js/lazyload.min.js"></script>
+  
   <script>
     $(document).ready(function () {
+      var myLazyLoad = new LazyLoad();
       $(".button-collapse").sideNav();
       $('#main_tabs').tabs({
         onShow: function (tab) {
@@ -1533,7 +1535,7 @@
       });
 
       
-      var bLazy = new Blazy();
+      
         
 
     });
