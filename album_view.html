@@ -36,24 +36,24 @@
     <div class="container">
       <div class="row center">
         <div class="col s12 center">
-          <p class="white-text cardtext">Album Name</p> <!-- change album name -->
+          <p class="white-text cardtext">Album Name</p>
+          <!-- change album name -->
         </div>
         <div class="row">
           <div class="col s12">
-            <div class="cards cards-3 padding10">
+            <div class="cards cards-3 pad10">
 
               <div class="row">
-                <div class="col s12 cards-container">
-                  <!-- drop images here -->
-                  
-                    <img data-src="images/arpan.jpg" class="responsive-img img-card materialboxed"/>
-                    <img data-src="images/home_card_1.jpg" class="responsive-img img-card materialboxed"/>
-                    <img data-src="images/farewell.jpg" class="responsive-img img-card materialboxed"/>
-                    <img data-src="images/technical_events.jpg" class="responsive-img img-card materialboxed"/>
-                    <img data-src="images/sahyadri.jpg" class="responsive-img img-card materialboxed"/>
-                    <img data-src="images/clouds_fest.jpg" class="responsive-img img-card materialboxed"/>
-                  
-                </div>
+                <section>
+                  <img data-src="images/arpan.jpg" />
+                  <img data-src="images/home_card_1.jpg" />
+                  <img data-src="images/farewell.jpg" />
+                  <img data-src="images/technical_events.jpg" />
+                  <img data-src="images/sahyadri.jpg" />
+                  <img data-src="images/clouds_fest.jpg" />
+                </section>
+
+
               </div>
             </div>
           </div>
@@ -61,7 +61,9 @@
       </div>
     </div>
   </div>
-
+  <div class="lightbox">
+    <div class="filter"></div>
+  </div>
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -93,12 +95,36 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/lazyload.min.js"></script>
   <script>
-     $(document).ready(function(){
+    $(document).ready(function () {
       var myLazyLoad = new LazyLoad();
-    $('.materialboxed').materialbox();
-  });
+      $('.materialboxed').materialbox();
+
+      $("section img").click(function () {
+        $(".lightbox").fadeIn(300);
+        $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+        $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
+        /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
+        $("html").css("overflow", "hidden");
+      });
+
+      $(".lightbox").click(function () {
+        $(".lightbox").fadeOut(300);
+        $("h1").remove();
+        $(".lightbox img").remove();
+        $("html").css("overflow", "auto");
+      });
+
+      $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+          $(".lightbox").fadeOut(300);
+          $(".lightbox img").remove();
+          $("html").css("overflow", "auto");
+        }
+      });
+
+    });
   </script>
- 
+
 </body>
 
 </html>
